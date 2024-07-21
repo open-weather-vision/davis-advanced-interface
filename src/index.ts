@@ -2,9 +2,10 @@ import { CommandResponse, Record, WeatherStationInterface, setup } from "owvisio
 import { BaudRate, RainCollectorSize } from "vant-environment/structures";
 import { WeatherStationAdvanced } from "vantjs/weather-station";
 import { AdvancedRealtimeDataContainer } from "vantjs/realtime-containers";
+import { waitForNewSerialConnection } from "vantjs/util";
 
 export type Config = {
-    serial_path: string,
+    // serial_path: string,
     baud_rate: BaudRate,
     rain_collector_size: RainCollectorSize,
 }
@@ -13,14 +14,14 @@ class AdvancedDavisInterface extends WeatherStationInterface<Config>{
     private station?: WeatherStationAdvanced;
     private realtime_container?: AdvancedRealtimeDataContainer;
     config: Config = {
-        serial_path: "COM7",
         baud_rate: 19200,
         rain_collector_size: "0.1mm"
     }
 
     async connect() {
+        const serial_path = await waitForNewSerialConnection();
         this.station = await WeatherStationAdvanced.connect({
-            path: this.config.serial_path,
+            path: serial_path,
             rainCollectorSize: this.config.rain_collector_size,
             baudRate: this.config.baud_rate,
         });
