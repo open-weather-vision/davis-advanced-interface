@@ -31,14 +31,14 @@ class AdvancedDavisInterface extends WeatherStationInterface<Config>{
     }
 
     async command(command: string, params: any[]): Promise<CommandResponse> {
-        return CommandResponse.unknownCommand(command);
+        return CommandResponse.unknown_command(command);
     }
 
     async record(sensor_slug: string): Promise<Record> {
         if(sensor_slug === "temp-out"){
             return new Record(sensor_slug, this.realtime_container?.tempOut ?? null, this.station?.settings.units.temperature ?? "none");
         }
-        return Record.nullRecord(sensor_slug);
+        return Record.null_record(sensor_slug);
     }
 
     async disconnect() {
