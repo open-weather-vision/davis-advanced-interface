@@ -12,21 +12,21 @@ export type Config = {
 class AdvancedDavisInterface extends WeatherStationInterface<Config>{
     private station?: WeatherStationAdvanced;
     private realtime_container?: AdvancedRealtimeDataContainer;
+    config: Config = {
+        serial_path: "COM7",
+        baud_rate: 19200,
+        rain_collector_size: "0.1mm"
+    }
 
-    async connect(): Promise<boolean> {
-        try{
-            this.station = await WeatherStationAdvanced.connect({
-                path: this.config.serial_path,
-                rainCollectorSize: this.config.rain_collector_size,
-                baudRate: this.config.baud_rate,
-            });
-            this.realtime_container = this.station.createDetailedRealtimeDataContainer({
-                updateInterval: 1,
-            });
-            return true;
-        }catch(err){
-            return false;
-        }
+    async connect() {
+        this.station = await WeatherStationAdvanced.connect({
+            path: this.config.serial_path,
+            rainCollectorSize: this.config.rain_collector_size,
+            baudRate: this.config.baud_rate,
+        });
+        this.realtime_container = this.station.createDetailedRealtimeDataContainer({
+            updateInterval: 1,
+        });
     }
 
     async command(command: string, params: any[]): Promise<CommandResponse> {
@@ -40,13 +40,8 @@ class AdvancedDavisInterface extends WeatherStationInterface<Config>{
         return Record.nullRecord(sensor_slug);
     }
 
-    async disconnect(): Promise<boolean> {
-        try{
-            this.station?.disconnect();
-            return true;
-        }catch(err){
-            return false;
-        }
+    async disconnect() {
+        this.station?.disconnect();
     }
 }
 
