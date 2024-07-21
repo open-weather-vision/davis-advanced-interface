@@ -19,9 +19,9 @@ class AdvancedDavisInterface extends WeatherStationInterface<Config>{
     }
 
     async connect() {
-        const serial_path = await waitForNewSerialConnection();
+        // const serial_path = await waitForNewSerialConnection();
         this.station = await WeatherStationAdvanced.connect({
-            path: serial_path,
+            path: "/dev/ttyUSB0",
             rainCollectorSize: this.config.rain_collector_size,
             baudRate: this.config.baud_rate,
         });
