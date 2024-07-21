@@ -1,0 +1,22 @@
+{
+    "slug": "davis-advanced-interface",
+    "name": "Advanced Davis interface",
+    "description": "owvision interface for the davis vantage pro 2 and vue.",
+    "author": "open-weather-vision",
+    "sensors": [
+        {
+            "slug": "temp-out",
+            "name": "Outside temperature",
+            "summary_type": "min-max-avg",
+            "description": "Temperature measured by the outside sensor",
+            "record_interval": "5s"
+        },
+        {
+            "slug": "precipation",
+            "name": "Precipation",
+            "summary_type": "sum",
+            "description": "Measured precipation",
+            "record_interval": "15min"
+        }
+    ]
+}

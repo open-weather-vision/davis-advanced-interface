@@ -1,0 +1,21 @@
+{
+  "name": "davis-advanced-interface",
+  "version": "1.0.0",
+  "description": "owvision interface for the davis vantage pro 2 and vue.",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "build": "npx typescript",
+    "install": "npm install && npm run build",
+    "start": "node dist/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "owvision-environment": "^1.2.8",
+    "typescript": "^5.5.3",
+    "vant-environment": "^4.1.0",
+    "vantjs": "^2.1.1"
+  }
+}
