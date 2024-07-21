@@ -3,6 +3,7 @@
     "name": "Advanced Davis interface",
     "description": "owvision interface for the davis vantage pro 2 and vue.",
     "author": "open-weather-vision",
+    "entrypoint": "dist/index.js",
     "sensors": [
         {
             "slug": "temp-out",
