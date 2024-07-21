@@ -9,6 +9,7 @@
             "name": "Outside temperature",
             "summary_type": "min-max-avg",
             "description": "Temperature measured by the outside sensor",
+            "unit_type": "temperature",
             "record_interval": "5s"
         },
         {
@@ -16,6 +17,7 @@
             "name": "Precipation",
             "summary_type": "sum",
             "description": "Measured precipation",
+            "unit_type": "temperature",
             "record_interval": "15min"
         }
     ]
