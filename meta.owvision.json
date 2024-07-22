@@ -54,7 +54,7 @@
             "name": "Precipation",
             "summary_type": "sum",
             "description": "Measured precipation",
-            "unit_type": "temperature",
+            "unit_type": "precipation",
             "record_interval": "15min"
         }
     ]
