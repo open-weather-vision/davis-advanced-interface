@@ -4,6 +4,42 @@
     "description": "owvision interface for the davis vantage pro 2 and vue.",
     "author": "open-weather-vision",
     "entrypoint": "dist/index.js",
+    "config": {
+        "baud_rate": {
+            "message": "Please enter your console's baud rate",
+            "description": "This setting must match your console's settings.",
+            "name": "Baud rate",
+            "type": "select",
+            "value": 19200,
+            "choices": [
+                { "title": "19200", "value": 19200 },
+                { "title": "14400", "value": 14400 },
+                { "title": "9600", "value": 9600 },
+                { "title": "4800", "value": 4800 },
+                { "title": "2400", "value": 2400 },
+                { "title": "1200", "value": 1200 }
+            ]
+        },
+        "rain_collector_size": {
+            "message": "Please enter your station's rain collector size",
+            "description": "There are three different rain collector types. Please choose yours.",
+            "name": "Rain collector size",
+            "type": "select",
+            "value": "0.1mm",
+            "choices": [
+                { "title": "0.1mm", "value": "0.1mm" },
+                { "title": "0.01in", "value": "0.01in" },
+                { "title": "0.2mm", "value": "0.2mm" }
+            ]
+        },
+        "serial_path": {
+            "message": "Please enter the serial connection path to your console",
+            "description": "The serial path defines the communication channel between owvision and your weather station console.",
+            "name": "Serial path",
+            "type": "text",
+            "value": ""
+        }
+    },
     "sensors": [
         {
             "slug": "temp-out",
