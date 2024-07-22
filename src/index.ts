@@ -1,16 +1,27 @@
-import { CommandResponse, Record, WeatherStationInterface, setup, Argument } from "owvision-environment/interfaces";
-import { BaudRate, BaudRates, RainCollectorSize, RainCollectorSizes } from "vant-environment/structures";
+import {
+    CommandResponse,
+    Record,
+    WeatherStationInterface,
+    setup,
+    Argument,
+} from "owvision-environment/interfaces";
+import {
+    BaudRate,
+    BaudRates,
+    RainCollectorSize,
+    RainCollectorSizes,
+} from "vant-environment/structures";
 import { WeatherStationAdvanced } from "vantjs/weather-station";
 import { AdvancedRealtimeDataContainer } from "vantjs/realtime-containers";
 import { waitForNewSerialConnection } from "vantjs/util";
 
 export type Config = {
-    serial_path: Argument<string>,
-    baud_rate: Argument<BaudRate>,
-    rain_collector_size: Argument<RainCollectorSize>,
-}
+    serial_path: Argument<string>;
+    baud_rate: Argument<BaudRate>;
+    rain_collector_size: Argument<RainCollectorSize>;
+};
 
-class AdvancedDavisInterface extends WeatherStationInterface<Config>{
+class AdvancedDavisInterface extends WeatherStationInterface<Config> {
     private station?: WeatherStationAdvanced;
     private realtime_container?: AdvancedRealtimeDataContainer;
 
@@ -21,9 +32,10 @@ class AdvancedDavisInterface extends WeatherStationInterface<Config>{
             rainCollectorSize: this.config.rain_collector_size.value,
             baudRate: this.config.baud_rate.value,
         });
-        this.realtime_container = this.station.createDetailedRealtimeDataContainer({
-            updateInterval: 1,
-        });
+        this.realtime_container =
+            this.station.createDetailedRealtimeDataContainer({
+                updateInterval: 1,
+            });
     }
 
     async command(command: string, params: any[]): Promise<CommandResponse> {
@@ -31,8 +43,18 @@ class AdvancedDavisInterface extends WeatherStationInterface<Config>{
     }
 
     async record(sensor_slug: string): Promise<Record> {
-        if(sensor_slug === "temp-out"){
-            return new Record(sensor_slug, this.realtime_container?.tempOut ?? null, this.station?.settings.units.temperature ?? "none");
+        if (sensor_slug === "temp-out") {
+            return new Record(
+                sensor_slug,
+                this.realtime_container?.tempOut ?? null,
+                this.station?.settings.units.temperature ?? "none"
+            );
+        } else if (sensor_slug === "precipation") {
+            return new Record(
+                sensor_slug,
+                this.realtime_container?.rain15m ?? null,
+                this.station?.settings.units.rain ?? "none"
+            );
         }
         return Record.null_record(sensor_slug);
     }
