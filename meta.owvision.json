@@ -50,12 +50,388 @@
             "record_interval": "5s"
         },
         {
+            "slug": "temp-in",
+            "name": "Inside temperature",
+            "summary_type": "min-max-avg",
+            "description": "Temperature measured by the inside sensor",
+            "unit_type": "temperature",
+            "record_interval": "5s"
+        },
+        {
+            "slug": "hum-out",
+            "name": "Outside humidity",
+            "summary_type": "min-max-avg",
+            "description": "Humidity measured by the outside sensor",
+            "unit_type": "humidity",
+            "record_interval": "1min"
+        },
+        {
+            "slug": "hum-in",
+            "name": "Inside humidity",
+            "summary_type": "min-max-avg",
+            "description": "Humidity measured by the inside sensor",
+            "unit_type": "humidity",
+            "record_interval": "1min"
+        },
+        {
+            "slug": "temp-extra-1",
+            "name": "Extra temperature 1",
+            "summary_type": "min-max-avg",
+            "description": "Temperature measured by the extra sensor 1",
+            "unit_type": "temperature",
+            "record_interval": "5s"
+        },
+        {
+            "slug": "temp-extra-2",
+            "name": "Extra temperature 2",
+            "summary_type": "min-max-avg",
+            "description": "Temperature measured by the extra sensor 2",
+            "unit_type": "temperature",
+            "record_interval": "5s"
+        },
+        {
+            "slug": "temp-extra-3",
+            "name": "Extra temperature 3",
+            "summary_type": "min-max-avg",
+            "description": "Temperature measured by the extra sensor 3",
+            "unit_type": "temperature",
+            "record_interval": "5s"
+        },
+        {
+            "slug": "temp-extra-4",
+            "name": "Extra temperature 4",
+            "summary_type": "min-max-avg",
+            "description": "Temperature measured by the extra sensor 4",
+            "unit_type": "temperature",
+            "record_interval": "5s"
+        },
+        {
+            "slug": "temp-extra-5",
+            "name": "Extra temperature 5",
+            "summary_type": "min-max-avg",
+            "description": "Temperature measured by the extra sensor 5",
+            "unit_type": "temperature",
+            "record_interval": "5s"
+        },
+        {
+            "slug": "temp-extra-6",
+            "name": "Extra temperature 6",
+            "summary_type": "min-max-avg",
+            "description": "Temperature measured by the extra sensor 6",
+            "unit_type": "temperature",
+            "record_interval": "5s"
+        },
+        {
+            "slug": "temp-extra-7",
+            "name": "Extra temperature 7",
+            "summary_type": "min-max-avg",
+            "description": "Temperature measured by the extra sensor 7",
+            "unit_type": "temperature",
+            "record_interval": "5s"
+        },
+        {
+            "slug": "hum-extra-1",
+            "name": "Extra humidity 1",
+            "summary_type": "min-max-avg",
+            "description": "Humdidity measured by the extra sensor 1",
+            "unit_type": "humidity",
+            "record_interval": "1min"
+        },
+        {
+            "slug": "hum-extra-2",
+            "name": "Extra humidity 2",
+            "summary_type": "min-max-avg",
+            "description": "Humdidity measured by the extra sensor 2",
+            "unit_type": "humidity",
+            "record_interval": "1min"
+        },
+        {
+            "slug": "hum-extra-3",
+            "name": "Extra humidity 3",
+            "summary_type": "min-max-avg",
+            "description": "Humdidity measured by the extra sensor 3",
+            "unit_type": "humidity",
+            "record_interval": "1min"
+        },
+        {
+            "slug": "hum-extra-4",
+            "name": "Extra humidity 4",
+            "summary_type": "min-max-avg",
+            "description": "Humdidity measured by the extra sensor 4",
+            "unit_type": "humidity",
+            "record_interval": "1min"
+        },
+        {
+            "slug": "hum-extra-5",
+            "name": "Extra humidity 5",
+            "summary_type": "min-max-avg",
+            "description": "Humdidity measured by the extra sensor 5",
+            "unit_type": "humidity",
+            "record_interval": "1min"
+        },
+        {
+            "slug": "hum-extra-6",
+            "name": "Extra humidity 6",
+            "summary_type": "min-max-avg",
+            "description": "Humdidity measured by the extra sensor 6",
+            "unit_type": "humidity",
+            "record_interval": "1min"
+        },
+        {
+            "slug": "hum-extra-7",
+            "name": "Extra humidity 7",
+            "summary_type": "min-max-avg",
+            "description": "Humdidity measured by the extra sensor 7",
+            "unit_type": "humidity",
+            "record_interval": "1min"
+        },
+        {
             "slug": "precipation",
             "name": "Precipation",
             "summary_type": "sum",
             "description": "Measured precipation",
             "unit_type": "precipation",
             "record_interval": "15min"
+        },
+        {
+            "slug": "wind",
+            "name": "Wind speed",
+            "summary_type": "min-max-avg",
+            "description": "Wind speed",
+            "unit_type": "wind",
+            "record_interval": "7s"
+        },
+        {
+            "slug": "wind-dir",
+            "name": "Wind direction",
+            "summary_type": "avg",
+            "description": "Wind direction in degrees",
+            "unit_type": "none",
+            "record_interval": "7s"
+        },
+        {
+            "slug": "wind-gust",
+            "name": "Wind gust speed",
+            "summary_type": "min-max-avg",
+            "description": "Maximum wind speed measured in 10 minutes",
+            "unit_type": "wind",
+            "record_interval": "10min"
+        },
+        {
+            "slug": "wind-gust-dir",
+            "name": "Wind gust direction",
+            "summary_type": "avg",
+            "description": "Direction of the maximum wind gust in 10 minutes in degrees",
+            "unit_type": "none",
+            "record_interval": "10min"
+        },
+        {
+            "slug": "wind-avg-2min",
+            "name": "Wind average short",
+            "summary_type": "min-max-avg",
+            "description": "Average wind of 2 minutes",
+            "unit_type": "wind",
+            "record_interval": "2min"
+        },
+        {
+            "slug": "wind-avg-10min",
+            "name": "Wind average long",
+            "summary_type": "min-max-avg",
+            "description": "Average wind of 10 minutes",
+            "unit_type": "wind",
+            "record_interval": "10min"
+        },
+        {
+            "slug": "chill",
+            "name": "Wind chill",
+            "summary_type": "min",
+            "description": "Perceived temperature influenced by the current wind speed",
+            "unit_type": "temperature",
+            "record_interval": "1min"
+        },
+        {
+            "slug": "thsw-index",
+            "name": "THSW index",
+            "summary_type": "min-max-avg",
+            "description": "Perceived temperature influenced by the current wind speed and the current humidity",
+            "unit_type": "temperature",
+            "record_interval": "1min"
+        },
+        {
+            "slug": "heat-index",
+            "name": "Heat index",
+            "summary_type": "max",
+            "description": "Heat index",
+            "unit_type": "temperature",
+            "record_interval": "1min"
+        },
+        {
+            "slug": "dewpoint",
+            "name": "Dewpoint",
+            "summary_type": "max",
+            "description": "Temperature at which water vapor can condense.",
+            "unit_type": "temperature",
+            "record_interval": "1min"
+        },
+        {
+            "slug": "pressure",
+            "name": "Pressure",
+            "summary_type": "min-max-avg",
+            "description": "Mean sea level pressure",
+            "unit_type": "pressure",
+            "record_interval": "1h"
+        },
+        {
+            "slug": "evapotranspiration",
+            "name": "Evapotranspiration",
+            "summary_type": "sum",
+            "description": "Combined process of water evaporation from soil and plant surfaces and transpiration from plants",
+            "unit_type": "evo_transpiration",
+            "record_interval": "1d"
+        },
+        {
+            "slug": "solar-radiation",
+            "name": "Solar radiation",
+            "summary_type": "avg",
+            "description": "Energy emitted by the sun that reaches the Earth in the form of sunlight",
+            "unit_type": "solar_radiation",
+            "record_interval": "1min"
+        },
+        {
+            "slug": "uv-index",
+            "name": "UV index",
+            "summary_type": "max",
+            "description": "Strength of the sun's ultraviolet radiation",
+            "unit_type": "none",
+            "record_interval": "30min"
+        },
+        {
+            "slug": "soil-moisture-1",
+            "name": "Soil moisture 1",
+            "summary_type": "min-max-avg",
+            "description": "Amount of water in the soil",
+            "unit_type": "soil_moisture",
+            "record_interval": "1h"
+        },
+        {
+            "slug": "soil-moisture-2",
+            "name": "Soil moisture 2",
+            "summary_type": "min-max-avg",
+            "description": "Amount of water in the soil",
+            "unit_type": "soil_moisture",
+            "record_interval": "1h"
+        },
+        {
+            "slug": "soil-moisture-3",
+            "name": "Soil moisture 3",
+            "summary_type": "min-max-avg",
+            "description": "Amount of water in the soil",
+            "unit_type": "soil_moisture",
+            "record_interval": "1h"
+        },
+        {
+            "slug": "soil-moisture-4",
+            "name": "Soil moisture 4",
+            "summary_type": "min-max-avg",
+            "description": "Amount of water in the soil",
+            "unit_type": "soil_moisture",
+            "record_interval": "1h"
+        },
+        {
+            "slug": "leaf-temperature-1",
+            "name": "Leaf temperature 1",
+            "summary_type": "min-max-avg",
+            "description": "Leaf temperature measured by sensor 1",
+            "unit_type": "leaf_temperature",
+            "record_interval": "1min"
+        },
+        {
+            "slug": "leaf-temperature-2",
+            "name": "Leaf temperature 2",
+            "summary_type": "min-max-avg",
+            "description": "Leaf temperature measured by sensor 2",
+            "unit_type": "leaf_temperature",
+            "record_interval": "1min"
+        },
+        {
+            "slug": "leaf-temperature-3",
+            "name": "Leaf temperature 3",
+            "summary_type": "min-max-avg",
+            "description": "Leaf temperature measured by sensor 3",
+            "unit_type": "leaf_temperature",
+            "record_interval": "1min"
+        },
+        {
+            "slug": "leaf-temperature-4",
+            "name": "Leaf temperature 4",
+            "summary_type": "min-max-avg",
+            "description": "Leaf temperature measured by sensor 4",
+            "unit_type": "leaf_temperature",
+            "record_interval": "1min"
+        },
+        {
+            "slug": "leaf-wetness-1",
+            "name": "Leaf wetness 1",
+            "summary_type": "min-max-avg",
+            "description": "Leaf wetness measured by sensor 1",
+            "unit_type": "none",
+            "record_interval": "1min"
+        },
+        {
+            "slug": "leaf-wetness-2",
+            "name": "Leaf wetness 2",
+            "summary_type": "min-max-avg",
+            "description": "Leaf wetness measured by sensor 2",
+            "unit_type": "none",
+            "record_interval": "1min"
+        },
+        {
+            "slug": "leaf-wetness-3",
+            "name": "Leaf wetness 3",
+            "summary_type": "min-max-avg",
+            "description": "Leaf wetness measured by sensor 3",
+            "unit_type": "none",
+            "record_interval": "1min"
+        },
+        {
+            "slug": "leaf-wetness-4",
+            "name": "Leaf wetness 4",
+            "summary_type": "min-max-avg",
+            "description": "Leaf wetness measured by sensor 4",
+            "unit_type": "none",
+            "record_interval": "1min"
+        },
+        {
+            "slug": "soil-temperature-1",
+            "name": "Soil temperature 1",
+            "summary_type": "min-max-avg",
+            "description": "Soil temperature measured by sensor 1",
+            "unit_type": "soil_temperature",
+            "record_interval": "1min"
+        },
+        {
+            "slug": "soil-temperature-2",
+            "name": "Soil temperature 2",
+            "summary_type": "min-max-avg",
+            "description": "Soil temperature measured by sensor 2",
+            "unit_type": "soil_temperature",
+            "record_interval": "1min"
+        },
+        {
+            "slug": "soil-temperature-3",
+            "name": "Soil temperature 3",
+            "summary_type": "min-max-avg",
+            "description": "Soil temperature measured by sensor 3",
+            "unit_type": "soil_temperature",
+            "record_interval": "1min"
+        },
+        {
+            "slug": "soil-temperature-4",
+            "name": "Soil temperature 4",
+            "summary_type": "min-max-avg",
+            "description": "Soil temperature measured by sensor 4",
+            "unit_type": "soil_temperature",
+            "record_interval": "1min"
         }
     ]
 }
